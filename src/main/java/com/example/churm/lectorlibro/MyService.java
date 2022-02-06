@@ -39,26 +39,6 @@ public class MyService extends Service implements MediaPlayer.OnPreparedListener
     MediaPlayer mediaPlayer;
     MediaController mediaController;
 
-    public void setMediaPlayer(Activity activity, Libro libro, View view, int idLibro) {
-        this.activity=activity;
-        this.view= view;
-        this.libroID=idLibro;
-
-        if (mediaPlayer != null){
-            mediaPlayer.release();
-        }
-        
-        mediaPlayer = new MediaPlayer();
-        mediaPlayer.setOnPreparedListener(this);
-        mediaController = new MediaController(activity);
-        Uri audio = Uri.parse(libro.urlAudio);
-        try {
-            mediaPlayer.setDataSource(activity, audio);
-            mediaPlayer.prepare();
-        } catch (IOException e) {
-            Log.e("Audiolibros", "ERROR: No se puede reproducir "+audio,e);
-        }
-    }
 
 
 
