@@ -201,7 +201,7 @@ public class    MainActivity extends AppCompatActivity
         SharedPreferences pref = getSharedPreferences(
                 "com.example.audiolibros_internal", MODE_PRIVATE);
         SharedPreferences.Editor editor = pref.edit();
-        editor.putInt("ultimo", id);
+        editor.putInt("Ultimo", id);
         editor.commit();
     }
     public void mostrarElementos(boolean mostrar) {

@@ -1,5 +1,7 @@
 package com.example.churm.lectorlibro;
 
+import static android.support.v4.content.ContextCompat.getSystemService;
+
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
@@ -10,8 +12,6 @@ import android.os.Build;
 import android.support.v4.app.NotificationCompat;
 import android.support.v4.app.NotificationManagerCompat;
 import android.widget.Toast;
-
-import static android.support.v4.content.ContextCompat.getSystemService;
 
 public class MyReceiver extends BroadcastReceiver {
 
@@ -31,7 +31,7 @@ public class MyReceiver extends BroadcastReceiver {
 
     private void createNotificationChannel() {
         // Create the NotificationChannel, but only on API 26+ because
-        // the NotificationChannel class is new and not in the support library
+
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             CharSequence name = channel_name;
             String description = "audioLibros";

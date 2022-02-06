@@ -25,7 +25,7 @@ import com.example.churm.lectorlibro.R;
 public class DetalleFragment extends Fragment implements View.OnTouchListener{
     public final String NotiChanelID = "audioLibros2";
     public static String ARG_ID_LIBRO = "id_libro";
-//    MediaPlayer mediaPlayer;
+
 
 //    MediaController mediaController;
     MyService servicio;
